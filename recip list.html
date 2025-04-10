@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe List</title>
+  <style>
+ header{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          
+            margin-left: 0;
+            padding-right: 105;
+            background-color: #F4E1D2;
+            width: 100%;
+        }
+       
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px
+        }
+        nav ul li a {
+            color: #4B2C20;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav ul li a:hover{
+            border-bottom: 2px solid #6D3A28;
+            
+        }
+        .explore-btn1 {
+  background-color: #4B2C20; 
+  color: #fff;
+  padding: 15px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.explore-btn1:hover {
+  background-color: #6D3A28; 
+ 
+}
+    #recipe-list-page {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    #recipe-list-page h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #4B2C20;
+    }
+
+    #filter-section {
+      text-align: center;
+      margin: 20px 0;
+      color: #4B2C20;
+    }
+
+    #filter-section label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #4B2C20;
+    }
+
+    #filter-section select {
+      padding: 8px 12px;
+      margin-left: 10px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      color: #4B2C20;
+    }
+
+    #recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+       color: #4B2C20;
+    }
+
+    .recipe-card {
+      background-color: #fff7f0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.272);
+      transition: transform 0.2s;
+      color: #4B2C20;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .recipe-content {
+      padding: 15px;
+      text-align: center;
+      color: #4B2C20;
+    }
+
+    .recipe-content h2 {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #4B2C20;
+    }
+
+    .recipe-content p {
+      font-size: 14px;
+      color: #4B2C20;
+      margin-bottom: 15px;
+    }
+
+    .recipe-content a.button {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color:#4B2C20;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .recipe-content a.button:hover {
+      background-color: #643a29;
+    }
+
+    @media (max-width: 600px) {
+      .recipe-card {
+        width: 90%;
+      }
+    }
+    .footer-container {
+    font-family: sans-serif;
+    background-color:#F4E1D2;
+    color: #8B4513;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .footer-container a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="Image/logo.png" width="10%" alt="" style="margin-left: 50px;" >
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipt.html">Add Recipe</a></li>
+                <li><a href="recip list.html">Recipe List</a></li>
+            </ul>
+            <a href="#" class="explore-btn1">Get Started Now</a>
+            </nav>
+        </div>
+    </header>
+  <div id="recipe-list-page">
+    <h1>Recipe Gallery</h1>
+
+    <!-- Category Filter -->
+    <div id="filter-section" style="color: #4B2C20;">
+      <label for="category-filter">Filter by Category:</label>
+      <select id="category-filter" name="category">
+        <option value="all">All</option>
+       
+        <option value="Appetizers">Appetizers</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Main Dishes">vegetarian</option>
+        <option value="Vegan">internation</option>
+       
+      </select>
+    </div>
+
+    <!-- Recipe Cards -->
+    <div id="recipe-container">
+      <div class="recipe-card">
+        <img src="https://th.bing.com/th/id/OIP.qqWJ0I1fr5XSpGDcYd1vmwHaHa?w=193&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Chocolate Cake">
+        <div class="recipe-content">
+          <h2>Homemade Lasagna</h2>
+          <p>A layered, cheesy dish that everyone will love.</p>
+          <a href="recipe-lasagna.html" class="button">View Recipe</a>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <img src="https://th.bing.com/th/id/OIP.0otRQmNh_FPX48OFlZcQxAHaE7?w=277&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Caesar Salad">
+        <div class="recipe-content">
+          <h2>Two-Tone Skillet Kebab</h2>
+          <p>Authentic Iranian kebab with the aroma of charcoal and a unique taste.</p>
+          <a href="kabab-tabe-2-rang.html" class="button">View Recipe</a>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <img src="https://www.inspiredtaste.net/wp-content/uploads/2020/07/Homemade-Caesar-Salad-Recipe-1200.jpg" alt="Caesar Salad">
+        <div class="recipe-content">
+          <h2>Caesar Salad</h2>
+          <p>A simple and elegant salad for the discerning ones.</p>
+          <a href="salad.html" class="button">View Recipe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-container">
+    <p>&copy; 2025 All Rights Reserved created by:somaya Ahmadi</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</body>
+</html>

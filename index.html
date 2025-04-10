@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* nav */
+        header{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 0;
+            padding-right: 105;
+            background-color: #F4E1D2;
+            width: 100%;
+        }
+       
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px
+        }
+        nav ul li a {
+            color: #4B2C20;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav ul li a:hover{
+            border-bottom: 2px solid #6D3A28;
+        }
+        .explore-btn1 {
+  background-color: #4B2C20; 
+  color: #fff;
+  padding: 15px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.explore-btn1:hover {
+  background-color: #6D3A28; 
+  box-shadow: 2px 3px 3px #4B2C20;
+}
+/* welcome-section */
+.explore-btn {
+  background-color: #4B2C20; 
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-top: 30px;
+}
+
+.explore-btn:hover {
+  background-color: #6D3A28; 
+  box-shadow: 2px 3px 3px #4B2C20;
+} 
+.welcome-section {
+    background-image: url(Image/background\ image.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 2;
+    color: #5D3A00;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.395);
+  }
+
+  .welcome-box h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #5D3A00;
+  }
+
+  .welcome-box p {
+    font-size: 1.2em;
+    color: #5D3A00;
+  }
+  .daily-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+/* daily-recipe */
+
+.daily-recipe {
+  background-color: #fff7f0;
+  border: 1px solid #e2d0b8;
+  border-radius: 30px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+  color: #5D3A00;
+  transition: transform 0.3s ease;
+}
+
+.daily-recipe:hover {
+  transform: translateY(-5px);
+}
+
+.daily-recipe h2 {
+  font-size: 1.4em;
+  color: #8B4513;
+  margin-bottom: 10px;
+}
+
+.daily-recipe p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.daily-recipe img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.daily-recipe a {
+  text-decoration: none;
+  background-color: #8B4513;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.daily-recipe a:hover {
+  background-color: #A0522D;
+}
+/* food -categorise */
+.food-categories {
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    .food-categories h2 {
+      font-size: 1.6em;
+      color: #8B4513;
+      margin-bottom: 30px;
+    }
+
+    .category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .category-box {
+      width: 160px;
+      height: 160px;
+      background-color: #fff;
+      border: 1px solid #e2d0b8;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: #5D3A00;
+    }
+
+    .category-box:hover {
+      transform: translateY(-5px);
+      background-color: #fdf3e6;
+    }
+
+    .category-box i {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .category-box span {
+      font-size: 1em;
+      font-weight: bold;
+    }
+      /* footer */
+         .footer-container {
+    font-family: sans-serif;
+    background-color:#F4E1D2;
+    color: #8B4513;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .footer-container a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+    </style>
+</head>
+<body>
+  <!-- nav -->
+    <header>
+        <div class="container">
+            <nav>
+                <img src="Image/logo.png" width="10%" alt="" style="margin-left: 50px;" >
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipt.html">Add Recipe</a></li>
+                <li><a href="recip list.html">Recipe List</a></li>
+            </ul>
+            <a href="#" class="explore-btn1">Get Started Now</a>
+            </nav>
+        </div>
+    </header>
+    <!-- welcom-section -->
+    <main>
+      <div class="welcome-section">
+        <div class="welcome-box">
+          <h1>Welcome to the land of flavors!</h1>
+          <p>
+            Here, flavors speak, scents bring back memories,
+            <br> and every recipe tells a story from the heart.
+            This book is for you 
+            For the times you want to cook with love, enjoy every bite,
+            <br>
+            And share warm meals with a smile.
+          </p>
+          
+          <p> Welcome to a world of flavors you’ll never forget.</p>
+          <a href="#" class="explore-btn1">Start Now</a>
+        </div>
+      </div>
+    </main>
+   <h2 style="text-align: center; color:#8B4513; font-weight: bolder;">Daily Recipes</h2>
+    <div class="daily-recipes">
+
+      <div class="daily-recipe">
+        <h2>Homemade Lasagna</h2>
+        <p>A layered, cheesy dish that everyone will love.</p>
+        <img src="Image/lasane.jpg" alt="Homemade Lasagna">
+        <a href="recipe-lasagna.html">View Full Recipe</a>
+      </div>
+    
+      <div class="daily-recipe">
+        <h2>Two-Tone Skillet Kebab</h2>
+        <p>Authentic Iranian kebab with the aroma of charcoal and a unique taste.</p>
+        <img src="Image/kabab-tabe-2-rang.jpg" alt="Two-Tone Skillet Kebab">
+        <a href="kabab-tabe-2-rang.html">View Full Recipe</a>
+      </div>
+    
+      <div class="daily-recipe">
+        <h2>Caesar Salad</h2>
+        <p>A simple and elegant salad for the discerning ones.</p>
+        <img src="Image/images.jfif" alt="Caesar Salad">
+        <a href="salad.html">View Full Recipe</a>
+      </div>
+    
+    </div>
+  <!-- food -categories -->
+    <div class="food-categories">
+      <h2>Featured Categories:</h2>
+  
+      <div class="category-grid">
+        <a href="appetizers.html" class="category-box">
+          <i class="fas fa-utensils"></i>
+          <span>Appetizers</span>
+        </a>
+  
+        <a href="Sweet.html" class="category-box">
+          <i class="fas fa-ice-cream"></i>
+          <span>Sweet</span>
+        </a>
+  
+        <a href="vegetarian.html" class="category-box">
+          <i class="fas fa-leaf"></i>
+          <span>Vegetarian</span>
+        </a>
+        
+        <a href="internation.html" class="category-box">
+          <i class="fas fa-globe"></i>
+          <span>International</span>
+        </a>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer-container">
+      <p>&copy; 2025 All Rights Reserved created by:somaya Ahmadi</p>
+      <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

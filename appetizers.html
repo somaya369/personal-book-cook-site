@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         header{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          
+            margin-left: 0;
+            padding-right: 105;
+            background-color: #F4E1D2;
+            width: 100%;
+        }
+       
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px
+        }
+        nav ul li a {
+            color: #4B2C20;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav ul li a:hover{
+            border-bottom: 2px solid #6D3A28;
+            
+        }
+        .explore-btn1 {
+  background-color: #4B2C20; 
+  color: #fff;
+  padding: 15px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.explore-btn1:hover {
+  background-color: #6D3A28; 
+ 
+}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Recipe Section Styling */
+        .recipe-list {
+            padding: 30px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .daily-recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .daily-recipe {
+            background-color: #fff7f0;
+            border: 1px solid #e2d0b8;
+            border-radius: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            font-family: sans-serif;
+            color: #5D3A00;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .daily-recipe img {
+            width: 100%;
+            height: 56%;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .daily-recipe:hover img {
+            opacity: 0.3; 
+        }
+
+        .overlay {
+            position: fixed; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%; 
+            height: 80%; 
+            background-color: rgba(214, 183, 156, 0.863); 
+            color: #4b2207;
+            padding: 20px;
+            visibility: hidden; 
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 15px;
+            z-index: 10;
+        }
+
+        .daily-recipe:hover .overlay {
+            visibility: visible;
+            opacity: 1; 
+        }
+
+        .overlay h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .overlay .ingredients,
+        .overlay .directions {
+            font-size: 1.1em;
+        }
+
+        .overlay ul {
+            
+            padding: 0;
+        }
+
+        .overlay ul li {
+            margin-bottom: 10px;
+        }
+
+        .overlay .directions p {
+            margin-top: 10px;
+        }
+
+        .overlay:before {
+            content: '×';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .overlay:before:hover {
+            color: #ff6347;
+        }
+
+         
+    .footer-container {
+    font-family: sans-serif;
+    background-color:#F4E1D2;
+    color: #8B4513;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .footer-container a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="Image/logo.png" width="10%" alt="" style="margin-left: 50px;" >
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipt.html">Add Recipe</a></li>
+                <li><a href="recip list.html">Recipe List</a></li>
+            </ul>
+            <a href="#" class="explore-btn1">Get Started Now</a>
+            </nav>
+        </div>
+    </header>
+    <section class="recipe-list">
+        <div class="daily-recipes">
+            <!-- Chicken Bruschetta -->
+            <div class="daily-recipe">
+                <h2>Chicken Bruschetta</h2>
+                <img src="Image/1548414702c9f29e552f804cd4ded4e580bdb538b8thubm.jpg" alt="Chicken Bruschetta">
+                <p>Crispy toasted bread topped with fresh tomatoes and basil</p>
+                <div class="overlay">
+                    <h3>Chicken Bruschetta</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Toasted bread</li>
+                            <li> Grilled chicken</li>
+                            <li>Fresh basil</li>
+                            <li> Tomatoes</li>
+                            <li> Garlic</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Toast the bread, grill the chicken, and top with basil, tomatoes, and garlic.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caesar Salad -->
+            <div class="daily-recipe">
+                <h2>Caesar Salad</h2>
+                <img src="Image/2-5.jpg" alt="Caesar Salad">
+                <p>A fresh and colorful combo of mozzarella, tomato & basil.</p>
+                <div class="overlay">
+                    <h3>Caesar Salad</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li> Romaine lettuce </li>
+                            <li> Croutons </li>
+                            <li>Parmesan cheese</li>
+                            <li> Caesar dressing</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Toss the lettuce with croutons, cheese, and Caesar dressing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Margherita Pizza -->
+            <div class="daily-recipe">
+                <h2>Margherita Pizza</h2>
+                <img src="Image/gh-9014.jpg" alt="Margherita Pizza">
+                <p>A timeless Italian pizza with tomato, mozzarella & fresh basil.</p>
+                <div class="overlay">
+                    <h3>Margherita Pizza</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Pizza dough</li>
+                            <li> Tomato sauce</li>
+                            <li> Mozzarella cheese </li>
+                            <li> Fresh basil </li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Spread the sauce on the dough, add cheese, and bake. Top with basil.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caprese Salad -->
+            <div class="daily-recipe">
+                <h2>Caprese Salad</h2>
+                <img src="Image/download.jfif" alt="Caprese Salad" height="56%">
+                <p>Experience the refreshing harmony of juicy tomatoes, creamy mozzarella, and fragrant basil — a true taste of Italy.</p>
+                <div class="overlay">
+                    <h3>Caprese Salad</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li> Fresh mozzarella</li>
+                            <li> Ripe tomatoes</li>
+                            <li>Fresh basil leaves</li>
+                            <li> Extra virgin olive oil</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Slice the tomatoes and mozzarella, layer them with basil leaves, and drizzle with olive oil. Add salt and pepper to taste.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Polenta Bites -->
+            <div class="daily-recipe">
+                <h2>Polenta Bites</h2>
+                <img src="Image/polenta.jfif" alt="Polenta Bites">
+                <p>Golden, crispy, and packed with flavor — perfect for snacking or sharing with friends.</p>
+                <div class="overlay">
+                    <h3>Polenta Bites</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li> Cornmeal (Polenta)</li>
+                            <li> Water or vegetable broth</li>
+                            <li>Grated Parmesan cheese</li>
+                            <li> Salt, pepper, herbs (optional)</li>
+                            <li>Optional toppings: mushrooms, pancetta, or cheese</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Cook the polenta until thick, stir in cheese and seasonings. Spread in a tray to set, cut into bites, then bake or pan-fry until golden.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Garlic Bread -->
+            <div class="daily-recipe">
+                <h2>Garlic Bread</h2>
+                <img src="Image/download (1).jfif" alt="Garlic Bread">
+                <p>Buttery, garlicky, and irresistible — a comforting side dish to complement any meal.</p>
+                <div class="overlay">
+                    <h3>Garlic Bread</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li> Bread (French or Italian)</li>
+                            <li> Fresh garlic, minced</li>
+                            <li> Butter</li>
+                            <li> Fresh parsley (optional)</li>
+                            <li> Salt and pepper</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Mix minced garlic, butter, parsley, salt, and pepper. Spread the mixture on sliced bread. Toast in the oven until golden and crispy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-container">
+        <p>&copy; 2025 All Rights Reserved created by:somaya Ahmadi</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+</body>
+</html>

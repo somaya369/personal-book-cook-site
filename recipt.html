@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Recipe</title>
+  <style>
+     header{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          
+            margin-left: 0;
+            padding-right: 105;
+            background-color: #F4E1D2;
+            width: 100%;
+        }
+       
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px
+        }
+        nav ul li a {
+            color: #4B2C20;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav ul li a:hover{
+            border-bottom: 2px solid #6D3A28;
+            
+        }
+        .explore-btn1 {
+  background-color: #4B2C20; 
+  color: #fff;
+  padding: 15px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.explore-btn1:hover {
+  background-color: #6D3A28; 
+ 
+}
+    .recipe-form-wrapper {
+      padding: 2rem;
+      color: #6D3A28;
+    }
+
+    .recipe-form {
+      background: #F4E1D2;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     padding-left: 20px;
+     padding-right: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+    }
+
+    .recipe-form h1 {
+      text-align: center;
+      color: #6D3A28;
+    }
+
+    .recipe-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .recipe-form input[type="text"],
+    .recipe-form textarea,
+    .recipe-form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .recipe-form textarea {
+      resize: vertical;
+    }
+
+    .recipe-form input[type="submit"] {
+      background-color: #6D3A28;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .recipe-form input[type="submit"]:hover {
+      background-color: #a35133;
+    }
+    .footer-container {
+    font-family: sans-serif;
+    background-color:#F4E1D2;
+    color: #8B4513;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .footer-container a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="Image/logo.png" width="10%" alt="" style="margin-left: 50px;" >
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipt.html">Add Recipe</a></li>
+                <li><a href="recip list.html">Recipe List</a></li>
+            </ul>
+            <a href="#" class="explore-btn1">Get Started Now</a>
+            </nav>
+        </div>
+    </header>
+  <div class="recipe-form-wrapper">
+    <form class="recipe-form" action="#" method="post">
+      <h1>Add a New Recipe</h1>
+
+      <label for="name">Recipe Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+      <label for="instructions">Cooking Instructions:</label>
+      <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" name="image" required>
+
+      <label for="category">Recipe Category:</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="Appetizers">Appetizers</option>
+        <option value="Main Dishes">Main Dishes</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Beverages">Beverages</option>
+        <option value="Salads">Salads</option>
+        <option value="Soups">Soups</option>
+      </select>
+
+      <input type="submit" value="Add Recipe">
+    </form>
+  </div>
+  <div class="footer-container">
+    <p>&copy; 2025 All Rights Reserved created by:somaya Ahmadi</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</body>
+</html>

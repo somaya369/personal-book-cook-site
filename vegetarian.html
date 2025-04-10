@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         header{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          
+            margin-left: 0;
+            padding-right: 105;
+            background-color: #F4E1D2;
+            width: 100%;
+        }
+       
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px
+        }
+        nav ul li a {
+            color: #4B2C20;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav ul li a:hover{
+            border-bottom: 2px solid #6D3A28;
+            
+        }
+        .explore-btn1 {
+  background-color: #4B2C20; 
+  color: #fff;
+  padding: 15px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.explore-btn1:hover {
+  background-color: #6D3A28; 
+}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Recipe Section Styling */
+        .recipe-list {
+            padding: 30px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .daily-recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .daily-recipe {
+            background-color: #fff7f0;
+            border: 1px solid #e2d0b8;
+            border-radius: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            font-family: sans-serif;
+            color: #5D3A00;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .daily-recipe img {
+            width: 100%;
+            height: 56%;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .daily-recipe:hover img {
+            opacity: 0.3; 
+        }
+
+        .overlay {
+            position: fixed; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%; 
+            height: 80%; 
+            background-color: rgba(214, 183, 156, 0.863); 
+            color: #4b2207;
+            padding: 20px;
+            visibility: hidden; 
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 15px;
+            z-index: 10;
+        }
+
+        .daily-recipe:hover .overlay {
+            visibility: visible;
+            opacity: 1; 
+        }
+
+        .overlay h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .overlay .ingredients,
+        .overlay .directions {
+            font-size: 1.1em;
+        }
+
+        .overlay ul {
+            
+            padding: 0;
+        }
+
+        .overlay ul li {
+            margin-bottom: 10px;
+        }
+
+        .overlay .directions p {
+            margin-top: 10px;
+        }
+
+        .overlay:before {
+            content: '×';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .overlay:before:hover {
+            color: #ff6347;
+        }
+
+           
+    .footer-container {
+    font-family: sans-serif;
+    background-color:#F4E1D2;
+    color: #8B4513;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .footer-container a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="Image/logo.png" width="10%" alt="" style="margin-left: 50px;" >
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipt.html">Add Recipe</a></li>
+                <li><a href="recip list.html">Recipe List</a></li>
+            </ul>
+            <a href="#" class="explore-btn1">Get Started Now</a>
+            </nav>
+        </div>
+    </header>
+    <section class="recipe-list">
+        <div class="daily-recipes">
+            <!-- Veggie Stir Fry -->
+            <div class="daily-recipe">
+                <h2>Veggie Stir Fry</h2>
+                <img src="Image/vegetablre.jfif" alt="Veggie Stir Fry">
+                <p>A vibrant and healthy vegetable stir fry with soy sauce and garlic.</p>
+                <div class="overlay">
+                    <h3>Veggie Stir Fry</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Broccoli</li>
+                            <li>Carrots</li>
+                            <li>Bell peppers</li>
+                            <li>Snow peas</li>
+                            <li>Garlic</li>
+                            <li>Soy sauce</li>
+                            <li>Olive oil</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Stir-fry vegetables with garlic and soy sauce in olive oil for 10-15 minutes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Veggie Burger -->
+            <div class="daily-recipe">
+                <h2>Veggie Burger</h2>
+                <img src="Image/veggia burgers.jpg" alt="Veggie Burger">
+                <p>Delicious homemade veggie burger made with black beans and spices.</p>
+                <div class="overlay">
+                    <h3>Veggie Burger</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Black beans</li>
+                            <li>Breadcrumbs</li>
+                            <li>Onion</li>
+                            <li>Garlic</li>
+                            <li>Carrots</li>
+                            <li>Spices (cumin, paprika)</li>
+                            <li>Olive oil</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Mash beans and mix with breadcrumbs, veggies, and spices. Form into patties and cook in olive oil.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vegetable Pasta -->
+            <div class="daily-recipe">
+                <h2>Vegetable Pasta</h2>
+                <img src="Image/Vegetable pasta.jfif" alt="Vegetable Pasta">
+                <p>A simple and flavorful pasta dish with seasonal vegetables and olive oil.</p>
+                <div class="overlay">
+                    <h3>Vegetable Pasta</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Whole wheat pasta</li>
+                            <li>Tomatoes</li>
+                            <li>Spinach</li>
+                            <li>Zucchini</li>
+                            <li>Olive oil</li>
+                            <li>Garlic</li>
+                            <li>Basil</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Cook pasta, sauté vegetables in olive oil, then mix everything together with fresh basil.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Veggie Tacos -->
+            <div class="daily-recipe">
+                <h2>Veggie Tacos</h2>
+                <img src="Image/vegetarian tacos.jfif" alt="Veggie Tacos">
+                <p>Fresh veggie tacos with a variety of colorful toppings and guacamole.</p>
+                <div class="overlay">
+                    <h3>Veggie Tacos</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Corn tortillas</li>
+                            <li>Avocado</li>
+                            <li>Tomatoes</li>
+                            <li>Lettuce</li>
+                            <li>Corn</li>
+                            <li>Black beans</li>
+                            <li>Lime</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Heat tortillas, then fill with black beans, corn, lettuce, tomatoes, and top with guacamole.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grilled Vegetables -->
+            <div class="daily-recipe">
+                <h2>Grilled Vegetables</h2>
+                <img src="Image/grilled vegetables.jfif" alt="Grilled Vegetables">
+                <p>Perfectly grilled seasonal vegetables with a hint of garlic and lemon.</p>
+                <div class="overlay">
+                    <h3>Grilled Vegetables</h3>
+                    <div class="ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            <li>Zucchini</li>
+                            <li>Bell peppers</li>
+                            <li>Eggplant</li>
+                            <li>Olive oil</li>
+                            <li>Garlic</li>
+                            <li>Lemon</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h4>Directions:</h4>
+                        <p><i class="fas fa-utensils"></i> Toss veggies with olive oil and garlic, grill until tender, then squeeze fresh lemon juice on top.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-container">
+        <p>&copy; 2025 All Rights Reserved created by:somaya Ahmadi</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+</body>
+</html>
